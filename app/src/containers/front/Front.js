@@ -44,7 +44,7 @@ class Front extends Component{
                             {
                                 this.props.userInfo.userId
                                 ?
-                                    <Logined hisory={this.props.history} userInfo={this.props.userInfo} />
+                                    <Logined history={this.props.history} userInfo={this.props.userInfo} />
                                     :
                                     <Login login={login} register={register}/>
                             }

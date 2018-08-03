@@ -43,7 +43,7 @@ app.use(session({
 }));
 
 
-6、客户端登录成功后，刷新需重新登录
+6、客户端登录成功后，刷新需重新登录(尚未解决)
 
 
 7、 Warning: Render methods should be a pure function of props and state; triggering nested component updates from render is not allowed. If necessary, trigger nested updates in componentDidUpdate.直接调用了函数，所以会导致无限渲染元素，导致内存溢出
@@ -59,7 +59,7 @@ AppIndex
                             null
                     }
 
-解决办法：
+解决办法：(尚未解决)
 
 
 

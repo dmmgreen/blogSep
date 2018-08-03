@@ -10,6 +10,7 @@ import {connect} from 'react-redux';
 import {bindActionCreators} from 'redux';
 import {actions} from '../reducers';
 import Front from './front/Front';
+import Admin from './admin/Admin';
 import NotFound from '../components/notFound/NotFound';
 import {Loading} from './components/loading/Loading';
 import {notification} from 'antd';
@@ -42,6 +43,7 @@ class AppIndex extends Component{
                 <div>
                     <Switch>
                         <Route component={NotFound} path="/404"/>
+                        <Route component={Admin} path="/admin"/>
                         <Route component={Front} />
                     </Switch>
                     {

@@ -20,12 +20,10 @@ app.use(cookieParser('express_react_cookie'));
 app.use(session({
     secret:'express_react_cookie',
     resave: true,
-    saveUninitialized:true,
-    cookie: {maxAge: 60 * 1000 * 30}//过期时间
+    saveUninitialized:false,
+    cookie: {maxAge: 60 * 1000 * 30,secure:false}//过期时间
 }));
-app.use('*',function (req, res, next) {
-    next();
-});
+
 //展示页面路由
 app.use('/', require('./api/frontMain'));
 //管理页面路由

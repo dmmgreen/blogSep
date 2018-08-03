@@ -4,10 +4,14 @@ const Express=require('express');
 const router=Express.Router();
 const {responseClient}=require('../common/util');
 
-
+router.use(function (req, res, next) {
+    console.log(req.session,'font');
+    next();
+});
 router.use('/user',require('./user'));
 //获取全部标签
 router.get('/getAllTags',function (req, res) {
+    console.log(req.session,req.session.userInfo,'userinfo')
     Tags.find(null,'name').then(data=>{
         responseClient(res,200,0,'请求成功',data);
     }).catch(err=>{
